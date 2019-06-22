@@ -681,7 +681,6 @@ void NRF24_initialize(void)
 //	//Bring CSN high
 //	NRF24_csn(1);
 //}
-
 void NRF24_DelayMicroSeconds(uint32_t uSec)
 {
 	uint32_t uSecVar = uSec;
@@ -730,12 +729,6 @@ void NRF24_startWrite( const void* buf, uint8_t len )
   NRF24_DelayMicroSeconds(20); //more than 10us
   NRF24_ce(0);
 }
-//uint8_t NRF24_get_status(void)
-//{
-//	uint8_t statReg;
-//	statReg = NRF24_read_register(REG_STATUS);
-//	return statReg;
-//}
 void NRF24_whatHappened(int *tx_ok)//,int *tx_fail)
 {
 	uint8_t status = NRF24_read_register(REG_STATUS);
