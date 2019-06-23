@@ -130,6 +130,8 @@ int main(void)
 			myRxData[32] = '\n';
 			HAL_UART_Transmit(&huart1, (uint8_t *)myRxData, 33, 10);
 		}
+		else
+			HAL_UART_Transmit(&huart1, (uint8_t *)"ERROR", strlen("ERROR"), 10);
 		
 	}
   /* USER CODE END 3 */
